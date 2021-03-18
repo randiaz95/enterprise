@@ -1,4 +1,4 @@
-# enterprise
+# ENTERPRISE
 Open source library to make your robot sentient and give your robot ability to talk and listen.
 
 - Enterprise is a software for robots so that they are sentient; listen and respond to you, and you can teach it things so it can learn.
