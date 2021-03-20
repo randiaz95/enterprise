@@ -9,7 +9,7 @@ class EarBox:
     def __init__(self, startup=True):
         self.voicebox = VoiceBox(startup="Initiating ear box")
         
-    def record(self, duration, **kwargs):
+    def __record(self, duration, **kwargs):
         loop = asyncio.get_event_loop()
         event = asyncio.Event()
         idx = 0
@@ -34,9 +34,9 @@ class EarBox:
             await event.wait()
 
 
-    def transform(self):
+    def __transform(self):
         pass
 
     def listen(self, duration=10.0):
-        recording = self.record(duration)
-        return self.transform(recording)
+        recording = self.__record(duration)
+        return self.__transform(recording)
